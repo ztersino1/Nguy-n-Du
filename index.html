@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiểu sử Đại thi hào Nguyễn Du</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #d7ccc8; /* Màu nền ấm hơn */
+        }
+        .vintage-paper {
+            background-color: #fcf9f2;
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        /* Họa tiết góc kiểu cổ điển màu vàng đồng */
+        .corner-ornament {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-color: #a67c00;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        .top-left { top: 20px; left: 20px; border-top: 4px solid; border-left: 4px solid; }
+        .top-right { top: 20px; right: 20px; border-top: 4px solid; border-right: 4px solid; }
+        .bottom-left { bottom: 20px; left: 20px; border-bottom: 4px solid; border-left: 4px solid; }
+        .bottom-right { bottom: 20px; right: 20px; border-bottom: 4px solid; border-right: 4px solid; }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #8b4513;
+            opacity: 0.4;
+        }
+        .portrait-frame {
+            border: 10px solid #4e342e;
+            outline: 2px solid #a67c00;
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.4);
+            background-color: #fff;
+        }
+        .work-card {
+            transition: transform 0.3s ease;
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        .work-card .img-container {
+            width: 100%;
+            height: 200px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            padding: 5px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .work-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: sepia(10%) contrast(105%); /* Một chút hiệu ứng màu ấm nhẹ nhưng vẫn giữ màu gốc */
+        }
+        .section-title {
+            color: #3e2723;
+            border-bottom: 2px solid #a67c00;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10 flex justify-center">
+
+    <div class="vintage-paper max-w-5xl w-full p-6 md:p-14 border border-stone-400 relative">
+        
+        <!-- Họa tiết trang trí 4 góc -->
+        <div class="corner-ornament top-left"></div>
+        <div class="corner-ornament top-right"></div>
+        <div class="corner-ornament bottom-left"></div>
+        <div class="corner-ornament bottom-right"></div>
+        
+        <!-- Header Section -->
+        <header class="grid md:grid-cols-3 gap-10 mb-12 items-center border-b-2 border-stone-800 pb-12">
+            <!-- Khung ảnh tác giả (Giữ màu gốc) -->
+            <div class="flex justify-center">
+                <div class="portrait-frame w-full aspect-[3/4] flex items-center justify-center relative overflow-hidden">
+                    <img src="https://cdn.baohatinh.vn/images/11f9d0f1bddffbb98012e89265a0883239cde1274142d79d634b7150fa3fb657ed99ce66c512fd045669e49035b60401/128d4150525t12633l0.jpg" alt="Chân dung Nguyễn Du" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Chan+Dung+Nguyen+Du'">
+                    <div class="absolute bottom-0 bg-stone-900/80 text-yellow-400 text-[10px] w-full text-center py-2 font-bold uppercase tracking-widest">Đại thi hào dân tộc</div>
+                </div>
+            </div>
+
+            <!-- Tiêu đề (2/3) -->
+            <div class="md:col-span-2 text-left">
+                <h1 class="text-5xl md:text-7xl font-bold text-stone-900 mb-4 font-serif tracking-tight">NGUYỄN DU</h1>
+                <p class="text-2xl italic text-amber-800 mb-6 font-serif font-semibold">Tố Như • Thanh Hiên</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-base text-stone-800">
+                    <p><i class="fas fa-calendar-alt text-amber-700 mr-2"></i><strong>Sinh:</strong> 1765 (Ất Dậu)</p>
+                    <p><i class="fas fa-cross text-amber-700 mr-2"></i><strong>Mất:</strong> 1820 (Canh Thìn)</p>
+                    <p class="md:col-span-2"><i class="fas fa-map-marker-alt text-amber-700 mr-2"></i><strong>Quê quán:</strong> Tiên Điền, Nghi Xuân, Hà Tĩnh</p>
+                    <p class="md:col-span-2"><i class="fas fa-award text-amber-700 mr-2"></i><strong>Vinh danh:</strong> Danh nhân văn hóa thế giới (UNESCO)</p>
+                </div>
+                
+                <div class="mt-8 p-5 bg-stone-100/80 italic border-l-4 border-amber-700 text-stone-700 text-lg shadow-inner">
+                    "Trải qua một cuộc bể dâu, những điều trông thấy mà đau đớn lòng."
+                </div>
+            </div>
+        </header>
+
+        <div class="grid md:grid-cols-12 gap-12">
+            
+            <!-- Cột trái: Dòng thời gian sự nghiệp -->
+            <div class="md:col-span-5 border-r border-stone-200 pr-8">
+                <h2 class="text-2xl font-bold section-title mb-8 flex items-center gap-3 pb-2 uppercase tracking-wide">
+                    <i class="fas fa-scroll"></i> Niên biểu cuộc đời
+                </h2>
+                
+                <div class="relative timeline-line pl-8 space-y-8 text-sm md:text-base">
+                    <div class="relative">
+                        <div class="absolute -left-[32px] top-1 bg-amber-700 w-5 h-5 rounded-full border-2 border-white shadow-sm"></div>
+                        <span class="font-bold text-amber-900 block text-lg">1765</span>
+                        <p class="text-stone-700 leading-relaxed">Sinh tại Thăng Long. Thuộc dòng dõi trâm anh thế phiệt "Bao giờ Ngàn Hống hết cây, sông Lam hết nước, họ này hết quan".</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[32px] top-1 bg-amber-700 w-5 h-5 rounded-full border-2 border-white shadow-sm"></div>
+                        <span class="font-bold text-amber-900 block text-lg">1783</span>
+                        <p class="text-stone-700 leading-relaxed">Đỗ Tam trường (Tú tài). Bắt đầu bước chân vào quan lộ nhưng sớm gặp cảnh loạn lạc.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[32px] top-1 bg-amber-700 w-5 h-5 rounded-full border-2 border-white shadow-sm"></div>
+                        <span class="font-bold text-amber-900 block text-lg">1789 - 1802</span>
+                        <p class="text-red-900 font-bold italic mb-1">"Thanh Hiên mười năm gió bụi"</p>
+                        <p class="text-stone-700 leading-relaxed">Sống cuộc đời nghèo khó, phiêu bạt. Chính thời gian này đã hình thành nên tư tưởng nhân đạo vĩ đại.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[32px] top-1 bg-amber-700 w-5 h-5 rounded-full border-2 border-white shadow-sm"></div>
+                        <span class="font-bold text-amber-900 block text-lg">1813</span>
+                        <p class="text-stone-700 font-bold text-amber-800">Chánh sứ sang nhà Thanh:</p>
+                        <p class="text-stone-700 leading-relaxed">Dẫn đầu đoàn sứ bộ sang Trung Quốc. Đây là cảm hứng cho tập "Bắc Hành Tạp Lục".</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[32px] top-1 bg-stone-800 w-5 h-5 rounded-full border-2 border-white shadow-sm"></div>
+                        <span class="font-bold text-stone-900 block text-lg">1820</span>
+                        <p class="text-stone-700 leading-relaxed">Ông lâm bệnh nặng và qua đời tại Huế. Để lại di sản văn chương đồ sộ cho hậu thế.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột phải: Tác phẩm (Màu sắc nguyên bản) -->
+            <div class="md:col-span-7 space-y-10">
+                <h2 class="text-2xl font-bold section-title mb-8 flex items-center gap-3 pb-2 uppercase tracking-wide">
+                    <i class="fas fa-book-open"></i> Tác phẩm bất hủ
+                </h2>
+
+                <!-- Tác phẩm 1: Truyện Kiều -->
+                <div class="work-card bg-white p-5 shadow-lg border-l-8 border-amber-800 border-y border-r border-stone-200">
+                    <div class="grid grid-cols-2 gap-6 items-center">
+                        <div class="img-container">
+                            <img src="https://www.nxbtre.com.vn/Images/Book/NXBTreStoryFull_03462015_104616.jpg" alt="Truyện Kiều">
+                        </div>
+                        <div>
+                            <h3 class="work-title font-bold text-xl text-stone-900">
+				<a href="https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u_(b%E1%BA%A3n_Tr%C6%B0%C6%A1ng_V%C4%A9nh_K%C3%BD_1911)/Kim,_V%C3%A2n,_Ki%E1%BB%81u_truy%E1%BB%87n"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   class="hover:text-amber-700 transition-colors">
+				   Truyện Kiều
+			    </h3>
+                            <p class="text-sm text-amber-700 mb-3 font-bold italic">Đoạn Trường Tân Thanh</p>
+                            <p class="text-sm text-stone-700 leading-relaxed">
+                                Kiệt tác số 1 của văn học Việt Nam, kết tinh tinh hoa ngôn ngữ dân tộc và tư tưởng nhân đạo sâu sắc.
+                            </p>
+                            <div class="mt-3 text-xs bg-amber-50 text-amber-900 px-3 py-1 inline-block border border-amber-200 rounded">
+                                3.254 câu lục bát • Chữ Nôm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tác phẩm 2: Thanh Hiên Thi Tập -->
+                <div class="work-card bg-white p-5 shadow-lg border-r-8 border-amber-600 border-y border-l border-stone-200">
+
+                    <!-- Dùng FLEX để khỏi bị grid rớt layout -->
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+
+                        <!-- Ảnh (trên mobile nằm trên, md thì nằm trái) -->
+                        <div class="img-container w-full md:w-1/2">
+                            <img class="w-full h-full object-contain"
+                                 src="https://lichsuvietnam.org/wp-content/uploads/2025/06/gia-tri-van-hoc-va-lich-su-cua-thanh-hien-thi-tap.jpg"
+                                 alt="Thanh Hiên thi tập">
+                        </div>
+
+                        <!-- Text (mobile dưới ảnh, md nằm phải) -->
+                        <div class="flex flex-col justify-center w-full md:w-1/2">
+                            <h3 class="work-title font-bold text-xl text-stone-900 text-center whitespace-nowrap">
+                                <a href="http://www.saimonthidan.com/?c=article&p=8337"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="hover:text-amber-700 transition-colors">
+                                    Thanh Hiên Thi Tập
+                                </a>
+                            </h3>
+
+                            <p class="text-sm text-amber-700 mb-3 font-bold italic text-left">Tập thơ Thanh Hiên</p>
+
+                            <p class="text-sm text-stone-700 leading-relaxed text-left">
+                                Gồm 78 bài thơ chữ Hán tâm tình về cuộc đời phiêu dạt và nỗi lòng trước thế sự hưng vong.
+                            </p>
+
+                            <div class="mt-3 flex justify-center">
+                                <div class="text-xs bg-amber-50 text-amber-900 px-3 py-1 inline-block border border-amber-200 rounded">
+                                    Chữ Hán • Đường luật
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tác phẩm 3: Bắc Hành Tạp Lục -->
+                <div class="work-card bg-white p-5 shadow-lg border-l-8 border-amber-700 border-y border-r border-stone-200">
+                    <div class="grid grid-cols-2 gap-6 items-center">
+                        <div class="img-container">
+                            <img src="https://nhaxuatbannghean.gov.vn/uploads/gioi-thieu-sach/2025_02/z6361175914164_6d5b781d8ddabbd9d0c2a3fa831f40b1.jpg" alt="Bắc Hành Tạp Lục">
+                        </div>
+                        <div>
+                            <h3 class="work-title font-bold text-xl text-stone-900">
+				<a href="http://www.saimonthidan.com/?c=article&p=836"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   class="hover:text-amber-700 transition-colors">
+				   Bắc Hành Tạp Lục
+			    </h3>
+                            <p class="text-sm text-amber-700 mb-3 font-bold italic">Ghi chép đi sứ phương Bắc</p>
+                            <p class="text-sm text-stone-700 leading-relaxed">
+                                Tập thơ ghi lại những quan sát sắc sảo về xã hội và con người Trung Hoa trên đường đi sứ.
+                            </p>
+                            <div class="mt-3 text-xs bg-amber-50 text-amber-900 px-3 py-1 inline-block border border-amber-200 rounded">
+                                131 bài thơ • Chữ Hán
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Tư tưởng nghệ thuật -->
+                <div class="mt-12 p-8 bg-[#3e2723] text-stone-100 rounded-lg relative shadow-xl">
+                    <div class="absolute top-0 right-0 p-4 opacity-20">
+                        <i class="fas fa-quote-right text-7xl text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-amber-500 font-serif uppercase tracking-widest border-b border-amber-900 pb-2">Trái tim nhân đạo</h3>
+                    <p class="text-base italic leading-relaxed opacity-95 relative z-10">
+                        Mộng Liên Đường chủ nhân đã nhận xét: Nguyễn Du có "con mắt nhìn thấu sáu cõi", có "tấm lòng nghĩ suốt nghìn đời". Văn chương của ông không chỉ là nghệ thuật, mà là tiếng khóc thương cho những thân phận bị chà đạp trong xã hội cũ.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="mt-16 pt-8 border-t border-stone-300 text-center">
+            <p class="text-[11px] text-stone-500 uppercase tracking-[0.3em] mb-2">Học sĩ Cần Chánh Điện • Đại thi hào dân tộc</p>
+        </footer>
+    </div>
+
+</body>
+</html>
